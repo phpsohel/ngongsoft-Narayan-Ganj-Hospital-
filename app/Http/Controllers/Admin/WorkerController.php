@@ -39,6 +39,13 @@ class WorkerController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|unique:workers',
+            'phone' => 'required',
+            'nid_no' => 'required',
+            'designation' => 'required',
+        ]);
         $store = new Worker();
         $store->garment_id = $request->garment_id;
         $store->name = $request->name;
@@ -83,7 +90,17 @@ class WorkerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+       $update = Worker::find($id);
+        $update->garment_id = $request->garment_id;
+        $update->name = $request->name;
+        $update->email = $request->email;
+        $update->phone = $request->phone;
+        $update->designation = $request->designation;
+        $update->nid_no = $request->nid_no;
+        $update->gender = $request->gender;
+        $update->blood_group = $request->blood_group;
+        $update->save();
+        return redirect()->back()->with('success', 'Worker Update Successfully');
     }
 
     /**
@@ -94,6 +111,8 @@ class WorkerController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = Worker::find($id);
+        $delete->delete();
+        return redirect()->back()->with('success', 'Worker Delete Successfully');
     }
 }

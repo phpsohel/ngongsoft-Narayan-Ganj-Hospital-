@@ -38,7 +38,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="exampleInputEmail1">Garments Name<span style="color:red;"> *</span></label>
+                                                    <label for="exampleInputEmail1">Garments Name</label>
                                                     <select name="garment_id" id="" class="form-control">
                                                         @foreach($garments as $key => $garment)
                                                             <option value="{{ $garment->id }}">{{ $garment->name ?? '' }}</option>
@@ -79,7 +79,7 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="exampleInputPassword1">Dsignation<span style="color:red;"> *</span></label>
+                                                    <label for="exampleInputPassword1">Designation<span style="color:red;"> *</span></label>
 
                                                     <input type="text" name="designation" required class="form-control" id="exampleInputPassword1">
 
@@ -179,17 +179,19 @@
                                                 @endif
                                             </td>
                                             <td>
-                                                <button type="button" class="open-EditUnitDialog btn btn-link" data-toggle="modal" data-target="#edit_member"><i class="fa-solid fa-pen-to-square" style="color:#7c5cc4"></i></button>
+                                                <button type="button" class="open-EditUnitDialog btn btn-link" data-toggle="modal" data-target="#edit_worker{{$worker->id}}"><i class="fa-solid fa-pen-to-square" style="color:#7c5cc4"></i></button>
+
                                                 <button type="button" class="open-EditUnitDialog btn btn-link"  data-toggle="modal" data-target="">
                                                     <a href="" class="text-danger"><i class="fa-solid fa-eye" style="color:#7c5cc4"></i>
                                                     </a>
                                                 </button>
                                                 <button type="button" class="open-EditUnitDialog btn btn-link" data-toggle="modal">
-                                                    <a id="delete" href="" class="text-danger"><i class="fa-solid fa-trash-can"></i>
+                                                    <a id="delete" href="{{ route('workers.delete', $worker->id) }}" class="text-danger"><i class="fa-solid fa-trash-can"></i>
                                                     </a>
                                                 </button>
                                             </td>
                                         </tr>
+                                        @include('worker.edit_modal')
                                         @endforeach
                                     </tbody>
                                 </table>

@@ -98,8 +98,7 @@ class GarmentsController extends Controller
     public function destroy($id)
     {
         $delete  = Garments::find($id);
-        $delete->delete();
-
-        return redirect()->back();
+         $delete->delete();
+        return redirect()->back()->with('success', 'Worker Delete Successfully');
     }
 }

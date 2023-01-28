@@ -1,4 +1,4 @@
-<div class="modal fade" id="edit_member{{$worker->id}}">
+<div class="modal fade" id="edit_worker{{$worker->id}}">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                 <p class="text-danger">The field labels marked with * are required input fields.</p>
-                <form action="{{route('garments.update', $worker->id)}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('workers.update', $worker->id)}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="card-body">
@@ -39,8 +39,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Email<span style="color:red;"> *</span></label>
-                                    <input type="email" name="email" required value="{{ $worker->name ?? '' }}" class="form-control" id="exampleInputPassword1">
-
+                                    <input type="email" name="email" required value="{{ $worker->email ?? '' }}" class="form-control" id="exampleInputPassword1">
 
                                     @if($errors->has('email'))
                                     <span style="color:red;">{{ $errors->first('email') }}</span>
@@ -50,8 +49,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Phone<span style="color:red;"> *</span></label>
-                                    <input type="text" name="phone" required value="{{ $worker->name ?? '' }}" class="form-control" id="exampleInputPassword1">
-
+                                    <input type="text" name="phone" required value="{{ $worker->phone ?? '' }}" class="form-control" id="exampleInputPassword1">
 
                                     @if($errors->has('phone'))
                                     <span style="color:red;">{{ $errors->first('phone') }}</span>
@@ -60,10 +58,9 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="exampleInputPassword1">Deesignation<span style="color:red;"> *</span></label>
+                                    <label for="exampleInputPassword1">Designation<span style="color:red;"> *</span></label>
 
-                                    <input type="text" name="designation" required value="{{ $worker->name ?? '' }}" class="form-control" id="exampleInputPassword1">
-
+                                    <input type="text" name="designation" required value="{{ $worker->designation ?? '' }}" class="form-control" id="exampleInputPassword1">
 
                                     @if($errors->has('designation'))
                                     <span style="color:red;">{{ $errors->first('designation') }}</span>
@@ -75,7 +72,8 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">NID No<span style="color:red;"> *</span></label>
-                                    <input type="text" name="nid_no" value="{{ $worker->name ?? '' }}" class="form-control" id="exampleInputEmail1" placeholder="">
+                                    <input type="text" name="nid_no" value="{{ $worker->nid_no ?? '' }}" class="form-control" id="exampleInputEmail1" placeholder="">
+
 
 
 
@@ -89,16 +87,14 @@
                                     <label for="exampleInputPassword1">Gender</label>
                                     <select name="gender" id="" class="form-control">
                                         <option value="1" selected>Male</option>
-
                                         <option value="2" selected>Female</option>
-
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Blood Group</label>
-                                    <input type="text" name="blood_group" class="form-control" id="exampleInputEmail1">
+                                    <input type="text" name="blood_group" value="{{ $worker->blood_group }}" class="form-control" id="exampleInputEmail1">
 
                                 </div>
                             </div>
