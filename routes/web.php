@@ -39,9 +39,11 @@ Route::middleware(['auth'])->group(function () {
         Route::resource('ajax_crud', AjaxCrudController::class);
         //Garments
         Route::resource('garments', GarmentsController::class);
+        Route::get('garments/details/{id}', [GarmentsController::class, 'show'])->name('garments.details');
         Route::get('garments/delete/{id}', [GarmentsController::class, 'destroy'])->name('garments.delete');
         //Worker
         Route::resource('workers', WorkerController::class);
+        Route::get('workers/details/{id}', [WorkerController::class, 'show'])->name('workers.details');
         Route::get('workers/delete/{id}', [WorkerController::class, 'destroy'])->name('workers.delete');
         //Service Provider
         Route::resource('service-providers', ServiceProviderController::class);

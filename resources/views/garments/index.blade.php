@@ -165,7 +165,8 @@
                                             <td>
                                                 <button type="button" class="open-EditUnitDialog btn btn-link" data-toggle="modal" data-target="#edit_garments{{ $garment->id }}"><i class="fa-solid fa-pen-to-square" style="color:#7c5cc4"></i></button>
                                                 <button type="button" class="open-EditUnitDialog btn btn-link"  data-toggle="modal" data-target="">
-                                                    <a href="" class="text-danger"><i class="fa-solid fa-eye" style="color:#7c5cc4"></i>
+                                                    <a href="{{ route('garments.details', $garment->id) }}" class="text-danger"><i class="fa-solid fa-eye" style="color:#7c5cc4"></i>
+
                                                     </a>
                                                 </button>
                                                 <button type="button" class="open-EditUnitDialog btn btn-link" data-toggle="modal">

@@ -39,9 +39,16 @@
         </div>
     </div>
     <div class="col-md-2"></div>
-
-    <!-- /.col (right) -->
 </div>
+<script>
+    $("#hide").click(function(){
+    $("p").hide();
+    });
 
+    $("#show").click(function(){
+    $("p").show();
+    });
+
+</script>
 @endsection
 

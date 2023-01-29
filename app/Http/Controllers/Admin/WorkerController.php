@@ -67,7 +67,9 @@ class WorkerController extends Controller
      */
     public function show($id)
     {
-        //
+
+        $data['show'] = Worker::find($id);
+        return view('worker.details',$data);
     }
 
     /**

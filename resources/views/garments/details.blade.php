@@ -66,35 +66,34 @@
 
                             <tr class="">
                                 <th class="text-center" colspan="5">
-                                    @if(!empty($show->photo))
-                                        <img src="{{asset('member_image/'. $show->photo ?? '')}}" style="height: 140px; width: 140px" alt="{{$show->member_name ?? ''}} ">
-                                    @else
-                                    <img src="{{asset('image/no_image.jpg')}}" style="height: 140px; width: 140px" alt="">
-                                    @endif
-                                    <h4 style="margin-top:10px;">({{ $show->name ?? '' }})</h4>
+                                    <img src="{{asset('public/image/logo.jpg')}}" style="height: 140px; width: 140px" alt="{{$show->member_name ?? ''}} ">
                                 </th>
                             </tr>
                         </thead>
                         <tbody class="table-bordered">
                             <tr>
                                 <th> Name:</th>
-                                <td style="text-align: center;">
-                                    <h4 class="">{{$show->name ?? ''}}</h4>
-                                </td>
+                                <td style="text-align: center;">{{$show->name ?? ''}}</td>
                                 <th>Email :</th>
                                 <td style="text-align: center;">{{ $show->email ?? ''}}</td>
                             </tr>
                             <tr>
                                 <th>Phone:</th>
                                 <td style="text-align: center;">{{$show->phone ?? ''}}</td>
-                                <th>Address:</th>
-                                <td style="text-align: center;">{{$show->address ?? ''}}</td>
+                                 <th>licence No:</th>
+                                 <td style="text-align: center;">{{$show->licence_no ?? ''}}</td>
+
+
                             </tr>
                             <tr>
-                                <th>licence No:</th>
-                                <td style="text-align: center;">{{$show->licence_no ?? ''}}</td>
-                                <th>Status:</th>
-                                <td style="text-align: center;">
+                                <th>Address:</th>
+                                <td style="text-align: center;">{{$show->address ?? ''}}</td>
+                                <th></th>
+                                <td></td>
+                                {{-- <th>Address:</th>
+                                <td style="text-align: center;">{{$show->address ?? ''}}</td> --}}
+
+                                {{-- <td style="text-align: center;">
                                      @if($show->status == '1')
 
                                      <a href="" class="text-success">Active</a>
@@ -102,9 +101,7 @@
                                      <a href="" class="text-danger">Inactive</a>
                                      @endif
 
-                                </td>
-                            </tr>
-                                <td style="text-align: center;"></td>
+                                </td> --}}
                             </tr>
                         </tbody>
                     </table>

@@ -31,14 +31,13 @@ toastr.success("{{ Session('success')}}")
         {{-- Login Error Message Disable --}}
         {{-- <x-auth-session-status class="mb-4" :status="session('status')" />
         <x-auth-validation-errors class="mb-4" :errors="$errors" /> --}}
-
         <div class="card">
             <div class="card-body login-card-body">
                 <h2 class="text-center"><b>Log in</b></h2>
                 <form action="{{ route('login') }}" method="POST">
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="email" name="email" value="" required class="form-control" placeholder="Email">
+                        <input type="email" name="email" value="admin@gmail.com" required class="form-control" placeholder="Email">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -46,7 +45,7 @@ toastr.success("{{ Session('success')}}")
                         </div>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="password" required autocomplete="current-password" class="form-control" placeholder="Password">
+                        <input type="password" name="password"  value="admin123" required autocomplete="current-password" class="form-control" placeholder="Password">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-lock"></span>
