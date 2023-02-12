@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <style>
+     .buttons-print {
+        margin: 5px;
+        background: #2196f3;
+
+     }
+
     @media print {
         * {
             font-size: 12px;
@@ -50,7 +56,8 @@
                 </div>
                 <div class="col-md-2 hidden-print" style="text-align: left;">
 
-                    <a id="click_print" type="button" class="btn btn-default btn-sm ml-3"><i class="dripicons-print"></i> Print</a>
+                    <a id="click_print" type="button" class="btn btn-secondary buttons-print" style="color:#fff;"><i class="dripicons-print"></i> Print</a>
+
                 </div>
                 <div class="col-md-6">
                 </div>
@@ -63,10 +70,9 @@
                 <div class="col-md-12" id="table_print">
                     <table class="table table-bordered">
                         <thead style=" background-color: #ffffff;">
-
                             <tr class="">
                                 <th class="text-center" colspan="5">
-                                        <img src="{{asset('public/image/logo.jpg')}}" style="height: 140px; width: 140px" alt="">
+                                    <img src="{{asset('image/2023-02-12 nrb-e1672919570541-300x273.png')}}" style="width: 140px" alt="">
                                 </th>
                             </tr>
                         </thead>

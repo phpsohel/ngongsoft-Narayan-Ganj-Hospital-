@@ -79,22 +79,14 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="exampleInputPassword1">Designation<span style="color:red;"> *</span></label>
-
-                                                    <input type="text" name="designation" required class="form-control" id="exampleInputPassword1">
-
-                                                    @if($errors->has('designation'))
-                                                    <span style="color:red;">{{ $errors->first('designation') }}</span>
-
-                                                    @endif
+                                                    <label for="exampleInputPassword1">Designation</label>
+                                                    <input type="text" name="designation"  class="form-control" id="exampleInputPassword1">
                                                 </div>
                                             </div>
-
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">NID No<span style="color:red;"> *</span></label>
-                                                    <input type="text" name="nid_no" class="form-control" id="exampleInputEmail1" placeholder="">
-
+                                                    <input type="text" name="nid_no" class="form-control" id="exampleInputEmail1">
 
                                                     @if($errors->has('address'))
                                                     <span style="color:red;">{{ $errors->first('address') }}</span>

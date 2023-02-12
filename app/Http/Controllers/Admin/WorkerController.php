@@ -39,12 +39,12 @@ class WorkerController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'name' => 'required',
             'email' => 'required|unique:workers',
             'phone' => 'required',
             'nid_no' => 'required',
-            'designation' => 'required',
         ]);
         $store = new Worker();
         $store->garment_id = $request->garment_id;
