@@ -17,7 +17,7 @@ class WorkerController extends Controller
     public function index()
     {
         $data['garments'] = Garments::all();
-        $data['workers']  = Worker::get();
+        $data['workers']  = Worker::orderBy('id', 'DESC')->get();
         return view('worker.index', $data);
     }
 
@@ -65,12 +65,11 @@ class WorkerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Request $request,$id)
     {
 
-        $data['show'] = Worker::find($id);
-        return view('worker.details',$data);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -105,6 +104,12 @@ class WorkerController extends Controller
         return redirect()->back()->with('success', 'Worker Update Successfully');
     }
 
+    public function detailsCustomer(Request $request,$id)
+    {
+        $data['show'] = Worker::find($id);
+        return view('worker.details', $data);
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -117,4 +122,6 @@ class WorkerController extends Controller
         $delete->delete();
         return redirect()->back()->with('success', 'Worker Delete Successfully');
     }
+    //Details
+
 }

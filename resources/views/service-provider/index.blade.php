@@ -125,6 +125,7 @@
                                         <th>Email</th>
                                         <th>Phone</th>
                                         <th>Designation</th>
+                                        <th>Service Type</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -135,9 +136,63 @@
                                     <tr>
                                         <td>{{ ++$i }}</td>
                                         <td>Ismail</td>
-                                        <td>esmai@gmail.com</td>
+                                        <td>ismail@gmail.com</td>
                                         <td>01847883474</td>
                                         <td>Narse</td>
+                                        <td>Diabetes </td>
+
+                                         <td>
+                                             <div class="dropdown">
+                                                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                     <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#edit-user" style="color: #7c5cc4"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                                                     <a href="" class="btn btn-primary dropdown-item" style="color: #7c5cc4;"><i class="fa-solid fa-trash"></i> Delete</a>
+                                                 </div>
+                                             </div>
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{ ++$i }}</td>
+                                        <td>Nadim</td>
+                                        <td>nadim@gmail.com</td>
+                                        <td>01847883474</td>
+                                        <td>Narse</td>
+                                        <td>Blood Group Check </td>
+                                         <td>
+                                             <div class="dropdown">
+                                                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                     <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#edit-user" style="color: #7c5cc4"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                                                     <a href="" class="btn btn-primary dropdown-item" style="color: #7c5cc4;"><i class="fa-solid fa-trash"></i> Delete</a>
+                                                 </div>
+                                             </div>
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{ ++$i }}</td>
+                                        <td>Rubel</td>
+                                        <td>rubel@gmail.com</td>
+                                        <td>01847883474</td>
+                                        <td>Narse</td>
+                                        <td>Pregnancy Test </td>
+
+                                         <td>
+                                             <div class="dropdown">
+                                                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
+                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                     <button type="button" class="btn btn-primary dropdown-item" data-toggle="modal" data-target="#edit-user" style="color: #7c5cc4"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+                                                     <a href="" class="btn btn-primary dropdown-item" style="color: #7c5cc4;"><i class="fa-solid fa-trash"></i> Delete</a>
+                                                 </div>
+                                             </div>
+                                         </td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{ ++$i }}</td>
+                                        <td>Hossain</td>
+                                        <td>hossain@gmail.com</td>
+                                        <td>01847883474</td>
+                                        <td>Narse</td>
+                                        <td>Eye Tests </td>
                                          <td>
                                              <div class="dropdown">
                                                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>

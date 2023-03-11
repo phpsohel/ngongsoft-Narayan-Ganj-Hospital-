@@ -43,7 +43,7 @@ Route::middleware(['auth'])->group(function () {
         Route::get('garments/delete/{id}', [GarmentsController::class, 'destroy'])->name('garments.delete');
         //Worker
         Route::resource('workers', WorkerController::class);
-        Route::get('workers/details/{id}', [WorkerController::class, 'show'])->name('workers.details');
+        Route::get('workers/details/customer/{id}', [WorkerController::class, 'detailsCustomer'])->name('workers.detailscustomer');
         Route::get('workers/delete/{id}', [WorkerController::class, 'destroy'])->name('workers.delete');
         //Service Provider
         Route::resource('service-providers', ServiceProviderController::class);

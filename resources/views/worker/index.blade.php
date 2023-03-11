@@ -49,7 +49,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">Name<span style="color:red;"> *</span></label>
-                                                    <input type="text" name="name" required class="form-control" id="exampleInputEmail1">
+                                                    <input type="text" name="name" required value="{{ old('name') }}" class="form-control" id="exampleInputEmail1">
 
                                                     @if($errors->has('name'))
                                                     <span style="color:red;">{{ $errors->first('name') }}</span>
@@ -60,7 +60,9 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Email<span style="color:red;"> *</span></label>
-                                                    <input type="email" name="email" required class="form-control" id="exampleInputPassword1">
+                                                    <input type="email" name="email" value="{{ old('email') }}" required class="form-control" id="exampleInputPassword1">
+
+
 
                                                     @if($errors->has('email'))
                                                     <span style="color:red;">{{ $errors->first('email') }}</span>
@@ -70,7 +72,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Phone<span style="color:red;"> *</span></label>
-                                                    <input type="text" name="phone" required class="form-control" id="exampleInputPassword1">
+                                                    <input type="number" name="phone" value="{{ old('phone') }}" required class="form-control" id="exampleInputPassword1">
 
                                                     @if($errors->has('phone'))
                                                     <span style="color:red;">{{ $errors->first('phone') }}</span>
@@ -80,13 +82,16 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Designation</label>
-                                                    <input type="text" name="designation"  class="form-control" id="exampleInputPassword1">
+                                                    <input type="text" name="designation" value="{{ old('designation') }}" class="form-control" id="exampleInputPassword1">
+
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="exampleInputEmail1">NID No<span style="color:red;"> *</span></label>
-                                                    <input type="text" name="nid_no" class="form-control" id="exampleInputEmail1">
+                                                    <input type="number" name="nid_no" value="{{ old('nid_no') }}" class="form-control" id="exampleInputEmail1">
+
 
                                                     @if($errors->has('address'))
                                                     <span style="color:red;">{{ $errors->first('address') }}</span>
@@ -106,8 +111,7 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="exampleInputPassword1">Blood Group</label>
-                                                    <input type="text" name="blood_group" class="form-control" id="exampleInputEmail1">
-
+                                                    <input type="text" name="blood_group" value="{{ old('blood_group') }}" class="form-control" id="exampleInputEmail1">
                                                 </div>
                                             </div>
 
@@ -138,8 +142,8 @@
                                     <thead>
                                         <tr>
                                             <th>Sl</th>
-                                            <th>Garments Name</th>
                                             <th>Name</th>
+                                            <th>Garments Name</th>
                                             <th>Email</th>
                                             <th>Phone</th>
                                             <th>Designation</th>
@@ -156,8 +160,8 @@
                                         @foreach( $workers as $worker)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            <td>{{ $worker->garments->name ?? ''}}</td>
                                             <td>{{ $worker->name ?? ''}}</td>
+                                            <td>{{ $worker->garments->name ?? ''}}</td>
                                             <td>{{ $worker->email ?? ''}}</td>
                                             <td>{{ $worker->phone ?? ''}}</td>
                                             <td>{{ $worker->designation ?? ''}}</td>
@@ -174,7 +178,8 @@
                                                 <button type="button" class="open-EditUnitDialog btn btn-link" data-toggle="modal" data-target="#edit_worker{{$worker->id}}"><i class="fa-solid fa-pen-to-square" style="color:#7c5cc4"></i></button>
 
                                                 <button type="button" class="open-EditUnitDialog btn btn-link"  data-toggle="modal" data-target="">
-                                                    <a href="{{ route('workers.details', $worker->id) }}" class="text-danger"><i class="fa-solid fa-eye" style="color:#7c5cc4"></i>
+                                                    <a href="{{ route('workers.detailscustomer', $worker->id) }}" class="text-danger"><i class="fa-solid fa-eye" style="color:#7c5cc4"></i>
+
                                                     </a>
                                                 </button>
                                                 <button type="button" class="open-EditUnitDialog btn btn-link" data-toggle="modal">

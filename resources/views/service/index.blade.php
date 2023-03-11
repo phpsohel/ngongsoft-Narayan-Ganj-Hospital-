@@ -138,7 +138,25 @@
                                 <tbody>
                                     <tr>
                                         <td>{{ ++$i }}</td>
-                                        <td>Ismail</td>
+                                        <td>Pregnancy Tests</td>
+                                        <td>01847883474</td>
+                                        <td>Emergency Obstetric Services</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{ ++$i }}</td>
+                                        <td>Diabetes Tests</td>
+                                        <td>01847883474</td>
+                                        <td>Emergency Obstetric Services</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{ ++$i }}</td>
+                                        <td>Blood Tests</td>
+                                        <td>01847883474</td>
+                                        <td>Emergency Obstetric Services</td>
+                                    </tr>
+                                    <tr>
+                                        <td>{{ ++$i }}</td>
+                                        <td>Eye Tests</td>
                                         <td>01847883474</td>
                                         <td>Emergency Obstetric Services</td>
                                     </tr>
